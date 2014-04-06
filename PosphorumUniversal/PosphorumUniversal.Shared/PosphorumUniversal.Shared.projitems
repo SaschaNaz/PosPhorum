@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="SharedProjectFile_SccProperties">
-    <SharedProjectFile_ProjectGuid>{00000000-0000-0000-0000-000000000000}</SharedProjectFile_ProjectGuid>
+    <SharedProjectFile_ProjectGuid>{3d0bb013-7d3a-47b3-a821-3ac5056a48a6}</SharedProjectFile_ProjectGuid>
     <SharedProjectFile_SccProjectName>
     </SharedProjectFile_SccProjectName>
     <SharedProjectFile_SccAuxPath>
