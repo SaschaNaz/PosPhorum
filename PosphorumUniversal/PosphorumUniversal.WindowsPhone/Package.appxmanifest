@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
 
-  <Identity Name="83977df8-2898-47a3-9ada-804b7a1e85d3"
+  <Identity Name="e2323afb-6705-4568-84c0-5ca772b5450e"
             Publisher="CN=saschanaz"
             Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="83977df8-2898-47a3-9ada-804b7a1e85d3" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="e2323afb-6705-4568-84c0-5ca772b5450e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>PosphorumUniversal.WindowsPhone</DisplayName>

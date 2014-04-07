@@ -1,20 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup Label="SharedProjectFile_SccProperties">
-    <SharedProjectFile_ProjectGuid>{3d0bb013-7d3a-47b3-a821-3ac5056a48a6}</SharedProjectFile_ProjectGuid>
-    <SharedProjectFile_SccProjectName>
-    </SharedProjectFile_SccProjectName>
-    <SharedProjectFile_SccAuxPath>
-    </SharedProjectFile_SccAuxPath>
-    <SharedProjectFile_SccLocalPath>
-    </SharedProjectFile_SccLocalPath>
-    <SharedProjectFile_SccProvider>
-    </SharedProjectFile_SccProvider>
-  </PropertyGroup>
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>1fed90ea-444e-47a0-827b-6b2a062908a4</SharedGUID>
+    <SharedGUID>38680c6a-b6f7-4b6d-b460-c2e55cec03e2</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>PosphorumUniversal</Import_RootNamespace>
@@ -26,15 +15,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.cs" />
-    <Content Include="$(MSBuildThisFileDirectory)DataModel\SampleData.json" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\MediumGray.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\DarkGray.png" />
-    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
-    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />
   </ItemGroup>
 </Project>
