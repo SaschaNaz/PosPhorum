@@ -130,8 +130,6 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="PosphorumUniversal.Windows_TemporaryKey.pfx" />
-    <PRIResource Include="Strings\ko\Resources.resw" />
-    <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />

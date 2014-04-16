@@ -18,4 +18,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Diet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MealLoader.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\ko\Resources.resw" />
+  </ItemGroup>
 </Project>

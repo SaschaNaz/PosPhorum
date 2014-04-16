@@ -165,7 +165,7 @@ namespace PosphorumUniversal
                         else
                         {
                             this.DefaultViewModel["Groups"] = dietmenu.Days;
-                            itemGridViewZoomedOut.ItemsSource = groupedItemsViewSource.View.CollectionGroups;
+                            //itemGridViewZoomedOut.ItemsSource = groupedItemsViewSource.View.CollectionGroups;
                         }
                     }
                     catch
@@ -189,7 +189,7 @@ namespace PosphorumUniversal
                     XDocument parsedMenu = await (new MealLoader()).GetDietmenu();
                     DietMenu dietMenu = new DietMenu(parsedMenu);
                     this.DefaultViewModel["Groups"] = dietMenu.Days;
-                    itemGridViewZoomedOut.ItemsSource = groupedItemsViewSource.View.CollectionGroups;
+                    //itemGridViewZoomedOut.ItemsSource = groupedItemsViewSource.View.CollectionGroups;
 
                     if (new TimeSpan(DateTime.Now.Ticks - dietMenu.Days[0].ServedDate.Ticks).Days < 7)
                     {
@@ -331,6 +331,8 @@ namespace PosphorumUniversal
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             navigationHelper.OnNavigatedTo(e);
+            this.Loaded += PageLoaded;
+            this.Unloaded += PageUnloaded;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)

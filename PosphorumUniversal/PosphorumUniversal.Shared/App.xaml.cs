@@ -9,7 +9,9 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Globalization.DateTimeFormatting;
 using Windows.Storage;
+#if WINDOWS_APP
 using Windows.UI.ApplicationSettings;
+#endif
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -44,6 +46,7 @@ namespace PosphorumUniversal
 
         protected override void OnWindowCreated(WindowCreatedEventArgs args)
         {
+#if WINDOWS_APP
             SettingsPane.GetForCurrentView().CommandsRequested += (s, e) =>
             {
                 SettingsCommand cmd = new SettingsCommand("ppolicy",
@@ -64,6 +67,7 @@ namespace PosphorumUniversal
                     });
                 e.Request.ApplicationCommands.Add(cmd);
             };
+#endif
 
             base.OnWindowCreated(args);
         }

@@ -14,7 +14,7 @@
             <local:IntCaloriesConverter x:Key="intCaloriesConverter" />
             <local:SettingChangeNotifier x:Key="settingChangeNotifier" />
 
-            <Style x:Key="SlimTextBlockButtonStyle" TargetType="Button" BasedOn="{StaticResource TextBlockButtonStyle}" >
+            <Style x:Key="SlimTextBlockButtonStyle" TargetType="Button"  >
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="ButtonBase">
