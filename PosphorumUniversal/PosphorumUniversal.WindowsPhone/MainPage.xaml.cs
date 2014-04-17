@@ -78,10 +78,10 @@ namespace PosphorumUniversal
         async Task Refresh()
         {
             Application.Current.Resources.Remove("NewDataChecked");
-            await SetData(true);
+            await SetData(true, getOffset());
         }
 
-        async Task SetData(Boolean ForceDataReload)
+        async Task SetData(Boolean ForceDataReload, Double scrollOffset)
         {
             Boolean IsNewDataNeeded = false;
 
@@ -151,8 +151,55 @@ namespace PosphorumUniversal
                 //localSettings.Values["dietMenuData"] = dietMenu.Stringify();
             }
 
+            setOffsetHandler(scrollOffset);
+
             if (message != null)
                 await new Windows.UI.Popups.MessageDialog(message).ShowAsync();
+        }
+
+        void setOffsetHandler(Double scrollOffset)
+        {
+            var scrollViewer = GetVisualChild<ScrollViewer>(itemListView);
+            if (scrollViewer != null && scrollViewer.ScrollableHeight >= scrollOffset)
+            {
+                System.Diagnostics.Debug.WriteLine("trying scroll: count " + itemListView.Items.Count + " height " + scrollViewer.ScrollableHeight);
+                System.Diagnostics.Debug.WriteLine("scroll no waiting");
+                setOffset(scrollOffset);
+            }
+            else
+            {
+                if (scrollViewer != null)
+                    System.Diagnostics.Debug.WriteLine("trying scroll: count " + itemListView.Items.Count + " height " + scrollViewer.ScrollableHeight);
+                System.Diagnostics.Debug.WriteLine("scroll waiting");
+                RoutedEventHandler handler = null;
+                handler = delegate
+                {
+                    System.Diagnostics.Debug.WriteLine("waited scroll");
+                    setOffset(scrollOffset);
+                    itemListView.Loaded -= handler;
+                };
+                itemListView.Loaded += handler;
+            }
+        }
+        void setOffset(Double scrollOffset)
+        {
+            if (scrollOffset >= 0)
+                GetVisualChild<ScrollViewer>(itemListView).ChangeView(null, scrollOffset, null, true);
+            else
+            {
+                foreach (object o in itemListView.Items)
+                {
+                    if ((o as MealData).ServedDate.Day == DateTime.Now.Day)
+                    {
+                        itemListView.ScrollIntoView(o);
+                        break;
+                    }
+                }
+            }
+        }
+        Double getOffset()
+        {
+            return GetVisualChild<ScrollViewer>(itemListView).VerticalOffset;
         }
 
         public T GetVisualChild<T>(DependencyObject parent) where T : DependencyObject
@@ -201,7 +248,13 @@ namespace PosphorumUniversal
         /// session.  The state will be null the first time a page is visited.</param>
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            await SetData(false);
+            Double previousScrollOffset = -1;
+            if (e.PageState != null)
+            {
+                if (e.PageState.ContainsKey("ScrollOffset"))
+                    previousScrollOffset = (Double)e.PageState["ScrollOffset"];
+            }
+            await SetData(false, previousScrollOffset);
         }
 
         /// <summary>
@@ -214,6 +267,7 @@ namespace PosphorumUniversal
         /// serializable state.</param>
         private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
+            e.PageState["ScrollOffset"] = GetVisualChild<ScrollViewer>(itemListView).VerticalOffset;
         }
 
         #region NavigationHelper registration

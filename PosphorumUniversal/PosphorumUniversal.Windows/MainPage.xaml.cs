@@ -266,6 +266,13 @@ namespace PosphorumUniversal
                 }
             }
         }
+        Double getOffset()
+        {
+            if (!IsSnapped())
+                return GetVisualChild<ScrollViewer>(itemGridView).HorizontalOffset;
+            else
+                return GetVisualChild<ScrollViewer>(itemListView).VerticalOffset;
+        }
 
         /// <summary>
         /// Populates the page with content passed during navigation. Any saved state is also
