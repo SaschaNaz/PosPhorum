@@ -22,9 +22,9 @@
     </Page.Resources>
 
     <Page.BottomAppBar>
-        <CommandBar ClosedDisplayMode="Minimal">
+        <CommandBar x:Name="DietCommand" ClosedDisplayMode="Minimal">
             <CommandBar.PrimaryCommands>
-                <AppBarButton Icon="Clear" Label="Clear" Click="ClearButtonClicked" />
+                <AppBarButton x:Name="ClearButton" Visibility="Collapsed" Icon="Clear" Label="Clear" Click="ClearButtonClicked" />
                 <AppBarButton Icon="Refresh" Label="Refresh" Click="RefreshButtonClicked" />
             </CommandBar.PrimaryCommands>
         </CommandBar>

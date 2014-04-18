@@ -51,9 +51,17 @@ namespace PosphorumUniversal
         private void itemGridView_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
             if ((sender as ListViewBase).SelectedItems.Count == 0)
+            {
+                ClearButton.Visibility = Visibility.Collapsed;
+                DietCommand.ClosedDisplayMode = AppBarClosedDisplayMode.Minimal;
                 TextListContainer.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            }
             else
+            {
+                ClearButton.Visibility = Visibility.Visible;
+                DietCommand.ClosedDisplayMode = AppBarClosedDisplayMode.Compact;
                 TextListContainer.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            }
 
             foreach (object o in e.AddedItems)
             {
@@ -166,10 +174,21 @@ namespace PosphorumUniversal
                 System.Diagnostics.Debug.WriteLine("scroll no waiting");
                 setOffset(scrollOffset);
             }
+            else if (scrollViewer != null)
+            {
+                System.Diagnostics.Debug.WriteLine("trying scroll: count " + itemListView.Items.Count + " height " + scrollViewer.ScrollableHeight);
+                System.Diagnostics.Debug.WriteLine("waiting scrollviewer");
+                EventHandler<Object> handler = null;
+                handler = delegate
+                {
+                    System.Diagnostics.Debug.WriteLine("waited scroll");
+                    setOffset(scrollOffset);
+                    scrollViewer.LayoutUpdated -= handler;
+                };
+                scrollViewer.LayoutUpdated += handler;
+            }
             else
             {
-                if (scrollViewer != null)
-                    System.Diagnostics.Debug.WriteLine("trying scroll: count " + itemListView.Items.Count + " height " + scrollViewer.ScrollableHeight);
                 System.Diagnostics.Debug.WriteLine("scroll waiting");
                 RoutedEventHandler handler = null;
                 handler = delegate
