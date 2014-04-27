@@ -1,5 +1,0 @@
-MainPackage=C:\Users\sasch_000\Documents\Visual Studio 2012\Projects\posroidwin\Posroid\bin\Release\Posmetro_1.1.0.23_Bundle\Posmetro_1.1.0.23_AnyCPU.appx
-SymbolPackage=C:\Users\sasch_000\Documents\Visual Studio 2012\Projects\posroidwin\Posroid\AppPackages\Posmetro_1.1.0.23_Test\Posmetro_1.1.0.23_AnyCPU.appxsym
-ResourcePack=C:\Users\sasch_000\Documents\Visual Studio 2012\Projects\posroidwin\Posroid\bin\Release\Posmetro_1.1.0.23_Bundle\Posmetro_1.1.0.23_language-en.appx
-ResourcePack=C:\Users\sasch_000\Documents\Visual Studio 2012\Projects\posroidwin\Posroid\bin\Release\Posmetro_1.1.0.23_Bundle\Posmetro_1.1.0.23_scale-140.appx
-ResourcePack=C:\Users\sasch_000\Documents\Visual Studio 2012\Projects\posroidwin\Posroid\bin\Release\Posmetro_1.1.0.23_Bundle\Posmetro_1.1.0.23_scale-180.appx
