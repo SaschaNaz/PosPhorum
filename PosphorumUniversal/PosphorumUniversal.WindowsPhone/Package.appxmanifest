@@ -1,42 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-
-  <Identity Name="e2323afb-6705-4568-84c0-5ca772b5450e"
-            Publisher="CN=saschanaz"
-            Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="e2323afb-6705-4568-84c0-5ca772b5450e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+  <Identity Name="23018SaschaNaz.PosPhoRum" Publisher="CN=2EF7B4D5-F580-4A6A-B0D7-D68D385099A2" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="f7907fb4-114e-4caa-a4dc-8ad8291b481f" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>PosphorumUniversal.WindowsPhone</DisplayName>
-    <PublisherDisplayName>saschanaz</PublisherDisplayName>
+    <DisplayName>PosPhorum</DisplayName>
+    <PublisherDisplayName>SaschaNaz</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.1</OSMinVersion>
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
-  
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="PosphorumUniversal.WindowsPhone.App">
-        <m3:VisualElements
-            DisplayName="PosphorumUniversal.WindowsPhone"
-            Square150x150Logo="Assets\Logo.png"
-            Square44x44Logo="Assets\SmallLogo.png"
-            Description="PosphorumUniversal.WindowsPhone"
-            ForegroundText="light"
-            BackgroundColor="transparent">
-            <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"/>
-            <m3:SplashScreen Image="Assets\SplashScreen.png"/>
-            <m3:ApplicationView MinWidth="width320"/> <!--Used in XAML Designer. DO NOT REMOVE-->
-        </m3:VisualElements>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PosphorumUniversal.WindowsPhone.App">
+      <m3:VisualElements DisplayName="PosPhorum" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="PosPhorum" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Square71x71Logo="Assets\Square71x71Logo.png" DefaultSize="square150x150Logo">
+          <m3:ShowNameOnTiles>
+            <m3:ShowOn Tile="square150x150Logo" />
+          </m3:ShowNameOnTiles>
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+        <m3:ApplicationView MinWidth="width320" />
+        <!--Used in XAML Designer. DO NOT REMOVE-->
+      </m3:VisualElements>
     </Application>
   </Applications>
   <Capabilities>

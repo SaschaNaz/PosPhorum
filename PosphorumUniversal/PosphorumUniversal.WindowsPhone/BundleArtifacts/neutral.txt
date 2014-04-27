@@ -1,0 +1,2 @@
+MainPackage=C:\Users\sasch_000\Documents\Visual Studio 2013\Projects\Posphorum\PosphorumUniversal\PosphorumUniversal.WindowsPhone\bin\Release\PosphorumUniversal.WindowsPhone_1.1.0.0_Bundle\PosphorumUniversal.WindowsPhone_1.1.0.0_AnyCPU.appx
+SymbolPackage=C:\Users\sasch_000\Documents\Visual Studio 2013\Projects\Posphorum\PosphorumUniversal\PosphorumUniversal.WindowsPhone\AppPackages\PosphorumUniversal.WindowsPhone_1.1.0.0_Test\PosphorumUniversal.WindowsPhone_1.1.0.0_AnyCPU.appxsym

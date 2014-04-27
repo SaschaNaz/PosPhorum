@@ -1,0 +1,2 @@
+MainPackage=C:\Users\sasch_000\Documents\Visual Studio 2013\Projects\Posphorum\PosphorumUniversal\PosphorumUniversal.Windows\bin\Release\PosphorumUniversal.Windows_1.1.0.24_Bundle\PosphorumUniversal.Windows_1.1.0.24_AnyCPU.appx
+SymbolPackage=C:\Users\sasch_000\Documents\Visual Studio 2013\Projects\Posphorum\PosphorumUniversal\PosphorumUniversal.Windows\AppPackages\PosphorumUniversal.Windows_1.1.0.24_Test\PosphorumUniversal.Windows_1.1.0.24_AnyCPU.appxsym

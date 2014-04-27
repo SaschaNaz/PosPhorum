@@ -45,13 +45,14 @@
     </Page.Resources>
 
     <Page.BottomAppBar>
-        <AppBar x:Name="bottomAppBar" Background="#FF00005D" BorderBrush="{StaticResource AppBarBorderThemeBrush}" IsSticky="True">
-            <Grid>
-                <AppBarButton Label="Clear" Icon="Clear" Click="ClearButtonClicked" />
-
+        <CommandBar x:Name="bottomAppBar" Background="#FF00005D" BorderBrush="{StaticResource AppBarBorderThemeBrush}" IsSticky="True">
+            <CommandBar.PrimaryCommands>
                 <AppBarButton Label="Refresh" Icon="Refresh" HorizontalAlignment="Right" Click="RefreshButtonClicked" />
-            </Grid>
-        </AppBar>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Clear" Icon="Clear" Click="ClearButtonClicked" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
     </Page.BottomAppBar>
 
     <!--

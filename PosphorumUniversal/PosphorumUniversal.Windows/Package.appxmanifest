@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="ed4a1185-234e-4768-a0b8-d7326ade02ab" Publisher="CN=saschanaz" Version="1.1.0.23" />
+  <Identity Name="23018SaschaNaz.PosPhoRum" Publisher="CN=2EF7B4D5-F580-4A6A-B0D7-D68D385099A2" Version="1.1.0.24" />
   <Properties>
     <DisplayName>PosPhorum</DisplayName>
     <PublisherDisplayName>SaschaNaz</PublisherDisplayName>
@@ -16,6 +16,11 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PosphorumUniversal.Windows.App">
       <m2:VisualElements DisplayName="PosPhorum" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="PosPhorum" ForegroundText="light" BackgroundColor="#464646">
+        <m2:DefaultTile DefaultSize="square150x150Logo">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
         <m2:ApplicationView MinWidth="width320" />
       </m2:VisualElements>
