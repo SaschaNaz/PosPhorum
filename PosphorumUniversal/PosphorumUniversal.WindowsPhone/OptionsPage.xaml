@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="PosphorumUniversal.OptionsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PosphorumUniversal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- TitlePanel -->
+        <StackPanel Grid.Row="0" Margin="24,17,0,28">
+            <TextBlock Text="PosPhorum" Style="{ThemeResource TitleTextBlockStyle}" Typography.Capitals="SmallCaps"/>
+            <TextBlock Text="Options" Margin="0,12,0,0" Style="{ThemeResource HeaderTextBlockStyle}"/>
+        </StackPanel>
+
+        <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
+        <StackPanel Grid.Row="1" x:Name="ContentRoot" Margin="24,0,24,0">
+            <!-- The StackPanel(s) below define individual content sections -->
+
+            <!-- Content Section 1-->
+            <StackPanel >
+
+                <!-- Section 1 header -->
+                <TextBlock Style="{StaticResource TitleTextBlockStyle}" x:Uid="Language" Text="" />
+
+                <!-- Section 1 body -->
+                <ToggleSwitch x:Name="ForceKoreanToggle" x:Uid="ForceKorean" />
+
+            </StackPanel>
+
+
+            <!-- Define more Content Sections below as necessary -->
+
+        </StackPanel>
+    </Grid>
+</Page>

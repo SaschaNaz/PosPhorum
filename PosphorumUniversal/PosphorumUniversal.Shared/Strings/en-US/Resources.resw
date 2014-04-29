@@ -133,7 +133,7 @@
     <value>Dinner</value>
   </data>
   <data name="ForceKorean.Header" xml:space="preserve">
-    <value>Force Korean on the names of the foods.</value>
+    <value>Force Korean on food names</value>
   </data>
   <data name="FormatException" xml:space="preserve">
     <value>PosPhorum currently cannot load diet menus because the format has been changed. Please wait for an update to fix this, or submit an issue to saschanaz@outlook.com when you see no update for a long time.</value>

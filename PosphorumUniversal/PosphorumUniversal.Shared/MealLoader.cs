@@ -135,12 +135,14 @@ namespace PosphorumUniversal
                 foreach (XElement code in foodcode)
                 {
                     String str = "";
-                    foreach (XElement fontcode in code.Elements())//font 태그는 한 개만 있을 거 같죠? ㅎㅎㅎ... 내용 빈 font 태그 한번 보셔야...
+                    foreach (XElement fontcode in code.Elements())//p 안에 태그가 한 개만 있을 거 같죠? ㅎㅎㅎ... 내용 빈 태그 한번 보셔야...
                     {
                         str += fontcode.Value;
                     }
-                    if (str.Length > 0)
-                        strfood.Add(str);
+                    foreach (String line in str.Split('\n'))//줄마다 p로 나뉘어 있는 경우가 있고 p 안에 두 줄이 있는 경우가 있다, 후자 대응
+                    {
+                        strfood.Add(line.Trim());
+                    }
                 }
             }
 

@@ -27,6 +27,9 @@
                 <AppBarButton x:Name="ClearButton" Visibility="Collapsed" Icon="Clear" Label="Clear" Click="ClearButtonClicked" />
                 <AppBarButton Icon="Refresh" Label="Refresh" Click="RefreshButtonClicked" />
             </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Options" Click="NavigateToOptions" />
+            </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
 

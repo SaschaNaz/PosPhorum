@@ -35,7 +35,7 @@ namespace PosphorumUniversal
         {
             this.InitializeComponent();
             if (ApplicationData.Current.LocalSettings.Values["ForceKorean"] == null)
-                ApplicationData.Current.LocalSettings.Values["ForceKorean"] = true;//temporary setting
+                ApplicationData.Current.LocalSettings.Values["ForceKorean"] = false;
 
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
@@ -81,6 +81,11 @@ namespace PosphorumUniversal
         private async void RefreshButtonClicked(object sender, RoutedEventArgs e)
         {
             await Refresh();
+        }
+
+        private void NavigateToOptions(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OptionsPage));
         }
 
         async Task Refresh()
