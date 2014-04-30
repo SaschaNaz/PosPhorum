@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="23018SaschaNaz.PosPhoRum" Publisher="CN=2EF7B4D5-F580-4A6A-B0D7-D68D385099A2" Version="1.1.0.25" />
+  <Identity Name="23018SaschaNaz.PosPhoRum" Publisher="CN=2EF7B4D5-F580-4A6A-B0D7-D68D385099A2" Version="1.1.0.26" />
   <Properties>
     <DisplayName>PosPhorum</DisplayName>
     <PublisherDisplayName>SaschaNaz</PublisherDisplayName>

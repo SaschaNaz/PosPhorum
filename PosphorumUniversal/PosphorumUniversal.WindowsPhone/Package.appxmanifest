@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="23018SaschaNaz.PosPhoRum" Publisher="CN=2EF7B4D5-F580-4A6A-B0D7-D68D385099A2" Version="1.1.0.2" />
+  <Identity Name="23018SaschaNaz.PosPhoRum" Publisher="CN=2EF7B4D5-F580-4A6A-B0D7-D68D385099A2" Version="1.1.0.3" />
   <mp:PhoneIdentity PhoneProductId="f7907fb4-114e-4caa-a4dc-8ad8291b481f" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>PosPhorum</DisplayName>
