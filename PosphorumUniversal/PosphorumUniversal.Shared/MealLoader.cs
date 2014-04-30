@@ -141,7 +141,9 @@ namespace PosphorumUniversal
                     }
                     foreach (String line in str.Split('\n'))//줄마다 p로 나뉘어 있는 경우가 있고 p 안에 두 줄이 있는 경우가 있다, 후자 대응
                     {
-                        strfood.Add(line.Trim());
+                        var trimmed = line.Trim();
+                        if (trimmed.Length > 0)
+                            strfood.Add(trimmed);
                     }
                 }
             }
